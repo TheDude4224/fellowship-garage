@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" width="400" height="440">
+  <defs>
+    <linearGradient id="shieldBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#26211b"/>
+      <stop offset="100%" stop-color="#141210"/>
+    </linearGradient>
+  </defs>
+
+  <!-- shield -->
+  <path d="M200 10 L374 46 C374 46 388 210 322 316 C278 384 200 428 200 428 C200 428 122 384 78 316 C12 210 26 46 26 46 Z"
+        fill="#efe8da" stroke="#17140f" stroke-width="8"/>
+  <path d="M200 30 L356 62 C356 62 368 208 308 305 C268 367 200 406 200 406 C200 406 132 367 92 305 C32 208 44 62 44 62 Z"
+        fill="url(#shieldBg)" stroke="#e8a33d" stroke-width="4"/>
+
+  <!-- checkered top band -->
+  <clipPath id="shieldClip">
+    <path d="M200 30 L356 62 C356 62 368 208 308 305 C268 367 200 406 200 406 C200 406 132 367 92 305 C32 208 44 62 44 62 Z"/>
+  </clipPath>
+  <g clip-path="url(#shieldClip)">
+    <g transform="translate(40,44)" fill="#efe8da">
+      <rect x="0" y="0" width="20" height="20"/><rect x="40" y="0" width="20" height="20"/><rect x="80" y="0" width="20" height="20"/><rect x="120" y="0" width="20" height="20"/><rect x="160" y="0" width="20" height="20"/><rect x="200" y="0" width="20" height="20"/><rect x="240" y="0" width="20" height="20"/><rect x="280" y="0" width="20" height="20"/><rect x="320" y="0" width="20" height="20"/>
+      <rect x="20" y="20" width="20" height="20"/><rect x="60" y="20" width="20" height="20"/><rect x="100" y="20" width="20" height="20"/><rect x="140" y="20" width="20" height="20"/><rect x="180" y="20" width="20" height="20"/><rect x="220" y="20" width="20" height="20"/><rect x="260" y="20" width="20" height="20"/><rect x="300" y="20" width="20" height="20"/>
+    </g>
+  </g>
+
+  <!-- FG monogram with wrench crossbar -->
+  <text x="200" y="205" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="bold" font-size="128" letter-spacing="2" fill="#e8a33d">FG</text>
+
+  <!-- wrench underline with cross -->
+  <g transform="translate(200,244)">
+    <g fill="#efe8da">
+      <rect x="-84" y="-5" width="168" height="10" rx="5"/>
+      <path d="M100 0 a15 15 0 1 0 -15 15 l5 -7 -10 -10 -7 5 a15 15 0 0 1 27 -3 z"/>
+      <path transform="scale(-1,1)" d="M100 0 a15 15 0 1 0 -15 15 l5 -7 -10 -10 -7 5 a15 15 0 0 1 27 -3 z"/>
+    </g>
+    <g fill="#b3402e">
+      <rect x="-4.5" y="-26" width="9" height="48" rx="3"/>
+      <rect x="-16" y="-13" width="32" height="9" rx="3"/>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <text x="200" y="304" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="bold" font-size="31" letter-spacing="3" fill="#efe8da">FELLOWSHIP</text>
+  <text x="200" y="338" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="bold" font-size="31" letter-spacing="7" fill="#e8a33d">GARAGE</text>
+
+  <!-- footer text -->
+  <text x="200" y="366" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-size="11.5" letter-spacing="1" fill="#b8ab95">FREEDOM CENTER CHURCH</text>
+  <text x="200" y="384" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-size="11" letter-spacing="1.5" fill="#8a7c63">EST. 2026</text>
+</svg>

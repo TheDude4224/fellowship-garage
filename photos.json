@@ -1,7 +1,8 @@
 [
-  {"file": "garage-restore.jpg", "caption": "The kind of work ahead of us — bodywork in the garage"},
+  {"file": "buick-super.jpg", "caption": "A 1949 Buick Super 4-door — same as our project car"},
+  {"file": "buick-roadmaster.jpg", "caption": "'49 Buick up front: waterfall grille and Fireball straight-eight"},
+  {"file": "garage-restore.jpg", "caption": "The kind of work ahead of us"},
   {"file": "workshop-tools.jpg", "caption": "Tools of the trade"},
   {"file": "vintage-interior.jpg", "caption": "Classic interior details"},
-  {"file": "bel-air.jpg", "caption": "'57 Chevy Bel Air — the golden era"},
-  {"file": "thunderbird.jpg", "caption": "'65 Ford Thunderbird Landau"}
+  {"file": "bel-air.jpg", "caption": "'57 Chevy Bel Air — the golden era"}
 ]

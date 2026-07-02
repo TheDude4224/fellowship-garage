@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" width="560" height="320">
+  <defs>
+    <radialGradient id="hub" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#2c251c"/>
+      <stop offset="100%" stop-color="#141210"/>
+    </radialGradient>
+  </defs>
+
+  <!-- wings -->
+  <g fill="#e8a33d" stroke="#17140f" stroke-width="3">
+    <!-- left wing -->
+    <path d="M225 150 C180 96 108 76 28 84 C60 100 76 108 92 120 C70 122 52 122 30 120 C62 138 84 144 108 148 C92 154 76 156 56 156 C90 170 122 172 152 168 C140 176 128 180 112 184 C150 192 196 184 225 162 Z"/>
+    <!-- right wing -->
+    <path d="M335 150 C380 96 452 76 532 84 C500 100 484 108 468 120 C490 122 508 122 530 120 C498 138 476 144 452 148 C468 154 484 156 504 156 C470 170 438 172 408 168 C420 176 432 180 448 184 C410 192 364 184 335 162 Z"/>
+  </g>
+
+  <!-- center hub -->
+  <circle cx="280" cy="150" r="86" fill="#efe8da" stroke="#17140f" stroke-width="5"/>
+  <circle cx="280" cy="150" r="74" fill="url(#hub)" stroke="#e8a33d" stroke-width="4"/>
+
+  <!-- piston + cross emblem -->
+  <g transform="translate(280,150)">
+    <!-- piston body -->
+    <g fill="#efe8da">
+      <rect x="-26" y="-34" width="52" height="34" rx="4"/>
+      <rect x="-32" y="-38" width="64" height="7" rx="3"/>
+      <rect x="-32" y="-26" width="64" height="4" rx="2" opacity=".55"/>
+      <rect x="-32" y="-18" width="64" height="4" rx="2" opacity=".55"/>
+      <!-- connecting rod -->
+      <path d="M-7 0 L7 0 L12 34 L-12 34 Z"/>
+      <circle cx="0" cy="38" r="12" fill="#efe8da"/>
+      <circle cx="0" cy="38" r="5" fill="#141210"/>
+    </g>
+    <!-- cross cut into piston crown -->
+    <g fill="#b3402e">
+      <rect x="-4" y="-56" width="8" height="30" rx="2"/>
+      <rect x="-12" y="-48" width="24" height="8" rx="2"/>
+    </g>
+  </g>
+
+  <!-- banner ribbon -->
+  <g>
+    <path d="M96 232 L464 232 L444 274 L116 274 Z" fill="#b3402e" stroke="#17140f" stroke-width="3"/>
+    <path d="M96 232 L60 253 L96 274 L116 274 Z" fill="#8f3223" stroke="#17140f" stroke-width="3"/>
+    <path d="M464 232 L500 253 L464 274 L444 274 Z" fill="#8f3223" stroke="#17140f" stroke-width="3"/>
+    <text x="280" y="261" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="bold" font-size="26" letter-spacing="4" fill="#efe8da">THE FELLOWSHIP GARAGE</text>
+  </g>
+
+  <!-- top + bottom text -->
+  <text x="280" y="42" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="bold" font-size="19" letter-spacing="5" fill="#e8a33d">FAITH · FRIENDS · HORSEPOWER</text>
+  <text x="280" y="300" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-size="15" letter-spacing="2.5" fill="#8a7c63">FREEDOM CENTER CHURCH · EST. 2026</text>
+</svg>

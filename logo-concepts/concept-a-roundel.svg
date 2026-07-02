@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <path id="arcTop" d="M 200,200 m -152,0 a 152,152 0 1,1 304,0" />
+    <path id="arcBot" d="M 48,200 a 152,152 0 0 0 304,0" />
+    <radialGradient id="innerGlow" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#2c251c"/>
+      <stop offset="100%" stop-color="#141210"/>
+    </radialGradient>
+  </defs>
+
+  <!-- outer badge -->
+  <circle cx="200" cy="200" r="196" fill="#17140f"/>
+  <circle cx="200" cy="200" r="190" fill="#efe8da"/>
+  <circle cx="200" cy="200" r="182" fill="none" stroke="#17140f" stroke-width="2"/>
+
+  <!-- rivets -->
+  <g fill="#17140f">
+    <circle cx="200" cy="14" r="4"/><circle cx="200" cy="386" r="4"/>
+    <circle cx="14" cy="200" r="4"/><circle cx="386" cy="200" r="4"/>
+    <circle cx="68" cy="68" r="4"/><circle cx="332" cy="68" r="4"/>
+    <circle cx="68" cy="332" r="4"/><circle cx="332" cy="332" r="4"/>
+  </g>
+
+  <!-- side diamonds -->
+  <g fill="#b3402e">
+    <path d="M52 200 l7 -9 7 9 -7 9 z"/>
+    <path d="M334 200 l7 -9 7 9 -7 9 z"/>
+  </g>
+
+  <!-- inner disc -->
+  <circle cx="200" cy="200" r="128" fill="url(#innerGlow)"/>
+  <circle cx="200" cy="200" r="128" fill="none" stroke="#e8a33d" stroke-width="5"/>
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#e8a33d" stroke-width="1.5" opacity=".5"/>
+
+  <!-- checkered arc top of inner disc -->
+  <clipPath id="discClip"><circle cx="200" cy="200" r="117"/></clipPath>
+  <g clip-path="url(#discClip)">
+    <g transform="translate(100,96)" fill="#efe8da">
+      <rect x="0" y="0" width="15" height="15"/><rect x="30" y="0" width="15" height="15"/><rect x="60" y="0" width="15" height="15"/><rect x="90" y="0" width="15" height="15"/><rect x="120" y="0" width="15" height="15"/><rect x="150" y="0" width="15" height="15"/><rect x="180" y="0" width="15" height="15"/>
+      <rect x="15" y="15" width="15" height="15"/><rect x="45" y="15" width="15" height="15"/><rect x="75" y="15" width="15" height="15"/><rect x="105" y="15" width="15" height="15"/><rect x="135" y="15" width="15" height="15"/><rect x="165" y="15" width="15" height="15"/>
+    </g>
+  </g>
+
+  <!-- '49 Buick 4-door silhouette: sloped trunk, dome roof, pontoon fenders, VentiPorts -->
+  <g transform="translate(96,148) scale(0.58)">
+    <path fill="#e8a33d" d="M22 100 L18 88 C18 76 26 68 44 62 C56 42 82 32 116 30 L206 30 C234 32 250 42 262 58 C292 60 322 66 340 76 C354 84 360 92 358 100 L336 100 A34 34 0 0 0 268 100 L136 100 A34 34 0 0 0 68 100 L28 100 Z"/>
+    <!-- windows: rear + front door glass -->
+    <path fill="#141210" opacity=".85" d="M126 40 L158 40 L158 62 L104 62 C108 52 116 44 126 40 Z M170 40 L200 40 C216 42 228 50 236 62 L170 62 Z"/>
+    <!-- VentiPorts -->
+    <g fill="#141210">
+      <circle cx="282" cy="74" r="4.5"/><circle cx="300" cy="76" r="4.5"/><circle cx="318" cy="78" r="4.5"/>
+    </g>
+    <!-- pontoon fender lines -->
+    <path d="M46 98 A42 42 0 0 1 130 98" fill="none" stroke="#141210" stroke-width="5" opacity=".55"/>
+    <path d="M246 98 A42 42 0 0 1 330 98" fill="none" stroke="#141210" stroke-width="5" opacity=".55"/>
+    <rect x="12" y="96" width="352" height="9" rx="4.5" fill="#e8a33d"/>
+    <circle cx="88" cy="102" r="27" fill="#17140f" stroke="#efe8da" stroke-width="6"/>
+    <circle cx="88" cy="102" r="9" fill="#e8a33d"/>
+    <circle cx="288" cy="102" r="27" fill="#17140f" stroke="#efe8da" stroke-width="6"/>
+    <circle cx="288" cy="102" r="9" fill="#e8a33d"/>
+    <!-- '49 BUICK label -->
+    <text x="188" y="148" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="bold" font-size="26" letter-spacing="6" fill="#e8a33d">'49 BUICK</text>
+  </g>
+
+  <!-- wrench + cross -->
+  <g transform="translate(200,284)">
+    <g fill="#efe8da">
+      <rect x="-60" y="-4.5" width="120" height="9" rx="4.5"/>
+      <path d="M72 0 a13 13 0 1 0 -13 13 l4.5 -6 -9 -9 -6 4.5 a13 13 0 0 1 23.5 -2.5 z"/>
+      <path transform="scale(-1,1)" d="M72 0 a13 13 0 1 0 -13 13 l4.5 -6 -9 -9 -6 4.5 a13 13 0 0 1 23.5 -2.5 z"/>
+    </g>
+    <g fill="#b3402e">
+      <rect x="-5" y="-34" width="10" height="58" rx="3"/>
+      <rect x="-19" y="-19" width="38" height="10" rx="3"/>
+    </g>
+  </g>
+
+  <!-- ring text (drawn last so nothing covers it) -->
+  <text font-family="Arial Narrow, Arial, sans-serif" font-weight="bold" font-size="27" letter-spacing="3.5" fill="#17140f">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">THE FELLOWSHIP GARAGE</textPath>
+  </text>
+  <text font-family="Arial Narrow, Arial, sans-serif" font-weight="bold" font-size="16" letter-spacing="2" fill="#8a5a17">
+    <textPath href="#arcBot" startOffset="50%" text-anchor="middle">FREEDOM CENTER CHURCH · EST. 2026</textPath>
+  </text>
+</svg>
