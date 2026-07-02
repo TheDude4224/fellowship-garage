@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fellowship Garage — Freedom Center Church</title>
+<meta name="description" content="A community classic car restoration project by Freedom Center Church. We're restoring a classic vehicle together to raise money for Kingdom Builders. Join us, sponsor us, or follow the build.">
+<meta property="og:title" content="The Fellowship Garage">
+<meta property="og:description" content="Restoring a classic car together — building friendships, skills, and community, and raising money for Kingdom Builders.">
+<meta property="og:image" content="https://fsg.vardon.org/img/logo.png">
+<meta property="og:url" content="https://fsg.vardon.org/">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/logo.png">
+<style>
+:root{
+  --bg:#141210; --bg2:#1e1a16; --panel:#26211b; --line:#3a332a;
+  --amber:#e8a33d; --amber-dk:#c9821a; --cream:#f3ead9; --muted:#b8ab95;
+  --red:#b3402e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font:16px/1.65 Georgia,'Times New Roman',serif}
+h1,h2,h3,.btn,nav,.tag{font-family:'Arial Narrow',Arial,Helvetica,sans-serif}
+a{color:var(--amber)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+
+/* Nav */
+header{position:sticky;top:0;z-index:50;background:rgba(20,18,16,.94);border-bottom:2px solid var(--amber-dk);backdrop-filter:blur(6px)}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}
+.brand img{height:44px;width:auto;border-radius:6px}
+.brand b{font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:.86rem;letter-spacing:.08em;text-transform:uppercase}
+nav a:hover{color:var(--amber)}
+nav .cta{color:#141210;background:var(--amber);padding:7px 14px;border-radius:4px;font-weight:bold}
+@media(max-width:720px){nav a:not(.cta){display:none}}
+
+/* Hero */
+.hero{position:relative;padding:84px 0 70px;text-align:center;background:
+  radial-gradient(ellipse at 50% 0%, #2c251c 0%, var(--bg) 65%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;
+  background:repeating-linear-gradient(45deg,var(--amber-dk) 0 14px,transparent 14px 28px);opacity:.5}
+.hero img.logo{height:120px;margin-bottom:22px;border-radius:12px;box-shadow:0 8px 40px rgba(232,163,61,.25)}
+.hero h1{font-size:clamp(2.1rem,6vw,3.4rem);letter-spacing:.05em;text-transform:uppercase;line-height:1.1}
+.hero h1 span{color:var(--amber)}
+.hero p.tag{color:var(--muted);margin:16px auto 0;max-width:620px;font-size:1.05rem;letter-spacing:.03em}
+.hero .btns{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:5px;text-decoration:none;font-weight:bold;
+  letter-spacing:.06em;text-transform:uppercase;font-size:.9rem;transition:transform .12s}
+.btn:hover{transform:translateY(-2px)}
+.btn-amber{background:var(--amber);color:#141210}
+.btn-ghost{border:2px solid var(--amber);color:var(--amber)}
+.btn-red{background:var(--red);color:var(--cream)}
+
+/* Sections */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+section h2{font-size:1.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+section h2::before{content:"— ";color:var(--amber)}
+.sub{color:var(--muted);margin-bottom:28px;font-style:italic}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:24px}
+.panel h3{color:var(--amber);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;font-size:1.02rem}
+ul.clean{list-style:none}
+ul.clean li{padding:7px 0 7px 26px;position:relative}
+ul.clean li::before{content:"🔧";position:absolute;left:0;font-size:.8rem;top:10px}
+
+/* Updates */
+.update{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--amber);
+  border-radius:8px;padding:18px 22px;margin-bottom:14px}
+.update .date{color:var(--amber);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-family:Arial,sans-serif}
+.update h3{margin:4px 0 6px;font-size:1.15rem}
+.update p{color:var(--muted);font-size:.95rem}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.gallery .shot{aspect-ratio:4/3;background:var(--bg2);border:1px solid var(--line);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem;
+  font-family:Arial,sans-serif;letter-spacing:.05em;overflow:hidden}
+.gallery img{width:100%;height:100%;object-fit:cover}
+
+/* Sponsors */
+.sponsor-tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:24px}
+.tier{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px;text-align:center}
+.tier h3{color:var(--amber);text-transform:uppercase;letter-spacing:.08em}
+.tier .amt{font-size:1.6rem;font-weight:bold;margin:8px 0;font-family:Arial,sans-serif}
+.tier p{color:var(--muted);font-size:.9rem}
+
+/* Meta / footer */
+.meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+.chip{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 18px;
+  font-size:.85rem;color:var(--muted);font-family:Arial,sans-serif}
+.chip b{color:var(--cream)}
+footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.85rem}
+footer a{color:var(--amber)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap navbar">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="The Fellowship Garage logo"><b>The Fellowship Garage</b></a>
+    <nav>
+      <a href="#about">The Project</a>
+      <a href="#updates">Build Log</a>
+      <a href="#gallery">Photos</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="#join">Join</a>
+      <a class="cta" href="https://fccfenton.churchcenter.com/giving" target="_blank" rel="noopener">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <img class="logo" src="img/logo.png" alt="The Fellowship Garage">
+    <h1>Restoring a Classic.<br><span>Building Community.</span></h1>
+    <p class="tag">A summer small group of Freedom Center Church — restoring a classic car together and using it to raise money for Kingdom Builders.</p>
+    <div class="btns">
+      <a class="btn btn-amber" href="https://fccfenton.churchcenter.com/groups/summer-interest-groups/the-fellowship-garage" target="_blank" rel="noopener">Join the Team</a>
+      <a class="btn btn-red" href="https://fccfenton.churchcenter.com/giving" target="_blank" rel="noopener">Give to the Project</a>
+      <a class="btn btn-ghost" href="#updates">Follow the Build</a>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <h2>More Than a Car</h2>
+    <p class="sub">This is about serving the community, mentoring others, and building something meaningful together.</p>
+    <div class="grid2">
+      <div>
+        <p>The Fellowship Garage is a community-driven classic car restoration project that combines automotive passion, teamwork, creativity, and charitable impact. Together, we're restoring a classic vehicle while building friendships, learning hands-on skills, creating media content, and connecting with local businesses.</p>
+        <p style="margin-top:14px">When the restoration is complete, the finished car will be used to raise money for <b>Kingdom Builders</b> — turning wrenches into real impact for our community.</p>
+        <div class="meta">
+          <span class="chip">📅 <b>Every other Tuesday</b> · 6:30–8:00 PM</span>
+          <span class="chip">📍 <b>The Fellowship Garage</b> · Davisburg, MI</span>
+          <span class="chip">⛪ <b>Freedom Center Church</b> · Fenton, MI</span>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>There's a place for you if you…</h3>
+        <ul class="clean">
+          <li>Love cars and want to turn wrenches</li>
+          <li>Enjoy photography, video, or social media</li>
+          <li>Want to help organize events and fundraisers</li>
+          <li>Can connect us with local businesses</li>
+          <li>Just want to be part of something bigger than yourself</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="updates">
+  <div class="wrap">
+    <h2>Build Log</h2>
+    <p class="sub">Progress updates from the garage — follow along and share.</p>
+    <div id="update-feed"><p style="color:var(--muted)">Loading updates…</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <h2>From the Garage</h2>
+    <p class="sub">Photos from meetings and the build. More coming as the project rolls on.</p>
+    <div class="gallery" id="photo-grid">
+      <div class="shot">📷 Photos coming soon</div>
+      <div class="shot">📷 Photos coming soon</div>
+      <div class="shot">📷 Photos coming soon</div>
+    </div>
+  </div>
+</section>
+
+<section id="sponsors">
+  <div class="wrap">
+    <h2>Sponsor the Build</h2>
+    <p class="sub">Local businesses make this project possible — parts, paint, supplies, and support.</p>
+    <p>Sponsors are recognized here on the site, in our social media content, and at events where the finished car appears. Every dollar and donated part moves the project — and the fundraising mission — forward.</p>
+    <div class="sponsor-tiers">
+      <div class="tier"><h3>Parts Partner</h3><div class="amt">In-Kind</div><p>Donate parts, materials, or shop services. Recognition on the build log and social posts.</p></div>
+      <div class="tier"><h3>Pit Crew</h3><div class="amt">$100+</div><p>Name or business listed on our sponsors board and event materials.</p></div>
+      <div class="tier"><h3>Title Sponsor</h3><div class="amt">$500+</div><p>Logo on the site, featured in media content, and recognized at the reveal event.</p></div>
+    </div>
+    <p style="margin-top:24px">Interested? Email <a href="mailto:Office@freedomcenter.church?subject=Fellowship%20Garage%20Sponsorship">Office@freedomcenter.church</a> or call <a href="tel:8106295261">(810) 629-5261</a>.</p>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap" style="text-align:center">
+    <h2 style="display:inline-block">Get In the Garage</h2>
+    <p class="sub">Meets every other Tuesday, 6:30–8:00 PM · Davisburg, MI</p>
+    <p style="max-width:560px;margin:0 auto">No experience needed — whether you love cars, cameras, or community, there's a spot on the team for you.</p>
+    <div class="btns" style="margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-amber" href="https://fccfenton.churchcenter.com/groups/summer-interest-groups/the-fellowship-garage" target="_blank" rel="noopener">Request to Join</a>
+      <a class="btn btn-red" href="https://fccfenton.churchcenter.com/giving" target="_blank" rel="noopener">Donate</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>The Fellowship Garage</b> · a summer interest group of <a href="https://fccfenton.churchcenter.com/" target="_blank" rel="noopener">Freedom Center Church</a>, Fenton, MI</p>
+    <p style="margin-top:6px"><a href="mailto:Office@freedomcenter.church">Office@freedomcenter.church</a> · <a href="tel:8106295261">(810) 629-5261</a> · Proceeds benefit Kingdom Builders</p>
+  </div>
+</footer>
+
+<script>
+fetch('updates.json').then(r=>r.json()).then(items=>{
+  const feed=document.getElementById('update-feed');
+  feed.innerHTML='';
+  items.forEach(u=>{
+    const d=document.createElement('div');d.className='update';
+    d.innerHTML='<div class="date">'+u.date+'</div><h3>'+u.title+'</h3><p>'+u.body+'</p>';
+    feed.appendChild(d);
+  });
+}).catch(()=>{document.getElementById('update-feed').innerHTML='<p style="color:var(--muted)">No updates yet — check back soon.</p>'});
+
+fetch('photos.json').then(r=>r.json()).then(list=>{
+  if(!list.length) return;
+  const g=document.getElementById('photo-grid');g.innerHTML='';
+  list.forEach(p=>{
+    const d=document.createElement('div');d.className='shot';
+    d.innerHTML='<img src="photos/'+p.file+'" alt="'+(p.caption||'Fellowship Garage photo')+'" loading="lazy">';
+    g.appendChild(d);
+  });
+}).catch(()=>{});
+</script>
+</body>
+</html>
